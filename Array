@@ -1,0 +1,34 @@
+package cobaarray;
+import java.io.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+/**
+ *
+ * @author Administrator
+ */
+public class CobaArray {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        try {
+            String PanjangStr;
+            int i, Panjang;
+            BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+            System.out.print("Masukkan Panjang array: ");
+            PanjangStr =br.readLine();
+            Panjang = Integer.parseInt(PanjangStr);
+            int[] bil = new int[Panjang];   // menyimpan nilai variabel panjang menjadi indeks dari array bil
+            /* perulangan for i melakukan perulangan dari 0 sampai sebanyak
+             * indeks dari array bil */
+            for( i=0; i<bil.length; i++ )
+            {
+                bil[i] = i; // menyimpan nilai perulangan i ke indeks array bil ke-i
+                System.out.println( bil[i] );   // mencetak nilai dari indeks array bil ke-i
+                
+            }   } catch (IOException ex) {
+            Logger.getLogger(CobaArray.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    
+}}
